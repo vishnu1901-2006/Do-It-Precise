@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n;
+    cin>>n;
+    int wisdom=0;
+    int power=0;
+    int arr[n][n];
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+                cin>>arr[i][j];
+                if(i==j){
+                    wisdom+=arr[i][j];
+                }if(i+j==n-1){
+                    power+=arr[i][j];
+                }
+        }
+    }
+    cout<<"path of wisdom :- "<<wisdom<<endl<<"path of power :- "<<power<<endl;
+    return 0;
+}
